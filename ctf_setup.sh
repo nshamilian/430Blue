@@ -20,7 +20,7 @@ sudo mysql -e "CREATE USER 'server'@'localhost' IDENTIFIED BY '$pswd';"
 # Create an examle database and populate it with some initial values
 sudo mysql -e "CREATE DATABASE bank;"
 sudo mysql -e "CREATE TABLE bank.users (user VARCHAR(20), password VARCHAR(20));"
-sudo mysql -e "INSERT INTO TABLE bank.users VALUES ('johndoe', '1234');"
+sudo mysql -e "INSERT INTO bank.users VALUES ('johndoe', '1234');"
 sudo mysql -e "GRANT ALL PRIVILEGES ON bank.* TO 'server'@'localhost';"
 sudo mysql_secure_installation
 echo "Finished setting up."
